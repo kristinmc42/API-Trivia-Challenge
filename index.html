@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristin - Project 2 - API Trivia Challenge</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet"> 
+    <!-- animate css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- font aewsome kit -->
+    <script src="https://kit.fontawesome.com/7bfd8027d9.js" crossorigin="anonymous"></script>
+
+    <!-- my style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- start of header -->
+    <header>
+        <h1>Trivia Challenge</h1>
+        <p>Your daily dose of trivia. Test your knowledge. 10 questions. Multiple choice. All the fun!</p>
+    </header>
+    <!-- end of header -->
+
+    <!-- start of category section -->
+    <section class="category wrapper">
+        <!-- drop-down list for user to select category -->
+        <label for="categories">Choose a category:</label>
+        <select id="categories" name="categories">
+            <option value="select">--Please select one--</option>
+            <option value="27">Animals</option>
+            <option value="25">Art</option>
+            <option value="26">Celebrities</option>
+            <option value="16">Entertainment: Board Games</option>
+            <option value="10">Entertainement: Books</option>
+            <option value="29">Entertainment: Comics</option>
+            <option value="32">Entertainment: Cartoons & Animations</option>
+            <option value="11">Entertainment: Film</option>
+            <option value="31">Entertainment: Japanese Anime & Manga</option>
+            <option value="12">Entertainment: Music</option>
+            <option value="13">Entertainment: Musicals & Theatres</option>
+            <option value="14">Entertainment: Television</option>
+            <option value="15">Entertainment: Video Games</option>
+            <option value="9">General Knowledge</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="20">Mythology</option>
+            <option value="24">Politics</option>
+            <option value="17">Science & Nature</option>
+            <option value="18">Science: Computers</option>
+            <option value="30">Science: Gadgets</option>
+            <option value="19">Science: Mathematics</option>
+            <option value="21">Sports</option>
+            <option value="28">Vehicles</option>
+        </select> 
+        <!-- intro  -->
+        <div class="intro wrapper">
+           
+        </div>
+    </section>
+    <!-- end of category section -->
+
+    <!-- start of quiz section -->
+    <section class="quiz wrapper">
+        <div class="wrapper quizArea">
+            <h2 class="question">Question </h2>
+            <p id="category">Category: </p>
+            <p id="difficulty">Difficulty: </p>
+            <p id="question">Question: </p>
+            <p id="answers">Answers: (Choose one)</p>
+            <!-- question form -->
+            <form action="submit" id="questionForm">
+                <div class="wrapper answerBlock">
+                    <div class="answerButtons">
+                        <input type="radio" id="answer1" name="answer">
+                        <label for="answer1"></label>
+                    </div>
+                    <div class="answerButtons">
+                        <input type="radio" id="answer2" name="answer">
+                        <label for="answer2"></label>
+                    </div>
+                    <div class="answerButtons">
+                        <input type="radio" id="answer3" name="answer">
+                        <label for="answer3"></label>
+                    </div>
+                    <div class="answerButtons">
+                        <input type="radio" id="answer4" name="answer">
+                        <label for="answer4"></label>
+                    </div>
+                </div>
+                <button id="checkAnswer">Check answer <i class="far fa-check-circle"></i></button>
+                
+            </form>
+            <!-- end of question form -->
+            <!-- results display -->
+                <div class="resultsArea">
+                    <p class="result"></p>
+                    <button id="previous"><i class="fas fa-arrow-circle-left"></i> Previous</button>
+                    <button id="next">Next <i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+            <!-- end of results display -->
+        </div>
+        <!-- end of quizArea div -->
+        <!-- finished display -->
+        <div class="finished wrapper">
+            <p id="correctAnswers"></p>
+            <button id="resetQuiz">Try Again <i class="fas fa-redo"></i></button>
+        </div>
+        <!-- end of finished display -->
+    </section>
+    <!-- end of quiz section -->
+    <!-- start of footer -->
+    <footer >
+        <div class=" background">
+            <div class="wrapper">
+                <p>Created at <a href="https://junocollege.com/">Juno College </a>@2021</p>
+                <p>API courtesy of 
+                    <a href="https://opentdb.com/">Open Trivia Database</a></p>
+            </div>
+        </div> 
+    </footer>
+    <!-- end of footer -->
+
+    <!-- attach jquery library and js script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <!-- my Javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>

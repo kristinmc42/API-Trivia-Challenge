@@ -1,0 +1,316 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* body */
+body {
+    font-family: 'KoHo', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+    background-image: url(./assets/dummy-1360x840-Goemetry.jpg);
+    background-size: cover;
+}
+
+
+/* wrapper */
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* stripping */
+footer,
+header,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0; 
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    background: rgb(218,218,212);
+    background: radial-gradient(circle, rgba(218,218,212,0.5914565655363708) 37%, rgba(119,118,117,0.8071428400461748) 76%);
+    height: 15vh;
+    min-height: 80px;
+    width: 100%;
+    padding: 1vh;  
+}
+
+h1,
+header p {
+    font-weight: bolder;
+    padding: 1vh 5vw; 
+}
+/* end of header */
+
+/* start of category section */
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    height: 100vh;
+    min-height: 50px;
+}
+
+.category label {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* drop-down list */
+#categories {
+    margin: 8vh 0;
+    border: 4px double black;
+    width: 50%;
+    height: 30px;
+} 
+
+/* end of category section */
+
+/* start of intro section */
+.intro {
+    font-weight: 600;
+}
+
+/* start button and resetQuiz button(finished section) */
+#start, #resetQuiz {
+    background-color: rgb(145, 142, 142);
+    border: 3px double black;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: whitesmoke;
+    text-align: center;
+    text-transform: uppercase;
+    font: 2em Quicksand, sans-serif;
+    padding: 15px;
+}
+
+#start:hover,
+#start:focus,
+#resetQuiz:hover,
+#resetQuiz:focus {
+    background-color: rgb(250, 240, 224);
+    color: black;
+}
+/* animation for added p element in intro section */
+.animate__animated.animate__lightSpeedInLeft {
+    --animate-duration: 1.5s;
+    --animation-delay: 0.7s;
+    color: rgba(93, 91, 94, 0.755);
+    font-size: 4em;
+    margin-top: 2vh;
+}
+/* end of intro section */
+
+/* start of quiz section */
+/* quiz section and finished div */
+.quiz,
+.finished {
+    background-color: white;
+    height: 100vh;
+    min-height: 700px; 
+}
+
+/* quizArea div */
+.quizArea {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: white;
+    height: calc(80vh - 100px);
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* question h2 */
+.question {
+    margin-top: 18vh;
+}
+
+/* category p */
+#category {
+    padding: 5px;
+}
+
+/* question p and answers p */
+#question,
+#answers {
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+/* questionForm */
+#questionForm {
+    display: inline-block;   
+}
+
+/* radio buttons and labels */
+.answerBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 10vw; 
+}
+
+/* divs for each radio button + label */
+/* NOTE: I didn't know a more efficient way of doing this than having each pair in a div so that each are on a separate line. I tried float but couldn't get it to work properly. */
+.answerButtons {
+    text-align: left;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* all radio button labels */
+#questionForm label {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/* when radio buttons are disabled */
+.disabled {
+    opacity: 0.6;
+}
+  
+/* the check answer, previous and next buttons */
+#checkAnswer, 
+#previous, 
+#next {
+    display: inline-block;
+    background-color: rgb(172, 168, 175);
+    border: 4px black double;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 0 3vw;
+    font: 1em Quicksand, sans-serif;
+    text-transform: uppercase;  
+}
+
+/* have the checkAnswer button have reversed colors from other buttons */
+#checkAnswer {
+    background-color: rgb(72, 65, 106);
+    color: white;
+    margin: 25px;
+}
+
+/* hover states */
+#checkAnswer:hover,
+#checkAnswer:focus {
+    background-color: rgb(172, 168, 175);
+    color: black;
+}
+    
+#previous:hover, 
+#previous:focus,
+#next:hover,
+#next:focus {
+    background-color: rgb(72, 65, 106);
+    color: white;
+}
+/* NOTE: for some reason I haven't figured out yet, the hover state on the #next button stops working sometimes when you get to the second page of the quiz section (question 2 and onwards) I noticed if I click on the page somewhere other than the button it seems to re-enable hover. Not sure why that is*/
+    
+/* when radio button checked  -- label is bolded */
+input[type='radio']:checked + label{
+    font-weight: bold;
+}
+
+/* if checked radio button is correct -- change label color */
+.makeGreen {
+    color: rgb(17, 142, 17);
+}
+
+/* if checked radio button is incorrect -- change label color */
+.makeRed {
+    color: red;
+}
+
+ /* resultsArea div  */
+ /* result p */
+.result {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    margin: 1vh 3vw;
+}
+/* end of quizArea div */
+
+/* finished div */
+/* correctAnswers p */
+#correctAnswers  {
+    font-size: 2em;
+    padding: 40vh 0 50px 0;
+    text-align: center;
+}
+
+/* animation for correctAnswers p */
+.animate_animated.animate__tada {
+    animation-duration: 2s;
+}
+/* end of quiz section */
+    
+/* footer */
+footer {
+    position: fixed;
+    min-height: 50px;
+    width: 100%;
+    bottom: 0;  
+    background: rgb(218,218,212);
+    background: radial-gradient(circle, rgba(218,218,212,0.5914565655363708) 37%, rgba(119,118,117,0.8071428400461748) 76%);
+}
+    
+footer p {
+    color: black;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+    
+/* media queries */
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    body {
+        font-size: 14px;
+    }
+    .animate__animated.animate__lightSpeedInLeft {
+        font-size: 2em;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    .animate__animated.animate__lightSpeedInLeft {
+        font-size: 2em;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
+
+
+
+/* BONUS TO DO NOTES:
+    - check API for img elements 
+    - do I want there to be more than 10 questions by letting the user choose?
+    */
