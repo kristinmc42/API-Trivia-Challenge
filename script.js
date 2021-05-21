@@ -55,6 +55,8 @@ app.getQuiz = async function getQuizByCategory() {
         console.log(data);
         // start quiz when the user clicks on the start button
         app.startButtonElement = $('#start').on('click', function() {
+            // take focus off start button
+            app.startButtonElement.blur();
             // add h2 with animation
             app.introDivElement = $('.intro').append($(`<h2 class="animate__animated animate__lightSpeedInLeft">Let's Go!!!</h2>`));
         
@@ -66,7 +68,7 @@ app.getQuiz = async function getQuizByCategory() {
                 // show the quiz and results divs
                 app.quizSectionElement.show();
                 app.resultsDivElement.show();
-        
+
                 // show the first question
                 app.askQuestion(data, app.index);
                 }, 2000)
@@ -194,8 +196,10 @@ app.decodeHtml = (html) => {
 
  app.checkAnswer = () => {
     // checks if the user's answer matches the correct answer
+    // remove focus from checkAnswer button
+    app.checkAnswerSubmitElement = $('#checkAnswer').blur();
     // hide the check answer button
-    app.checkAnswerSubmitElement = $('#checkAnswer').hide();
+    app.checkAnswerSubmitElement.hide();
 
     // assign the value of the selected radio button to a value that can be compared to the correct answer
     app.userAnswer = $('input[type="radio"]:checked').val();
@@ -267,6 +271,9 @@ app.endOfQuiz = () => {
         app.pCorrectAnswersElement.addClass('animate_animated animate__tada');
         // when clicked, reset button will reload the page 
         app.resetQuizButtonElement = $('#resetQuiz').on('click', function () {
+            //take focus off reset button
+            app.resetQuizButtonElement.blur();
+            //reload the page
             location.reload();
         });
     }, 2000);
@@ -276,6 +283,8 @@ app.endOfQuiz = () => {
 app.init = () => {
     app.resetPage();
     app.selectElement = $('select').on('change', function() {
+        // take focus off the select element
+        app.selectElement.blur();
         // show the intro div and create the start button
         app.introDivElement.show();
         app.startButtonElement = $('.intro').append($(`<button id="start">Start <i class="far fa-play-circle"></i></button>`));
