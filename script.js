@@ -88,7 +88,9 @@ app.getQuiz = async function getQuizByCategory() {
             
             // when user clicks on next button
             app.nextButtonElement = $('#next').on('click', function() {
-                // check that it is not the last question
+                // take focus off next button
+                app.nextButtonElement.blur();
+                // if not the last question, check if the question has been answered
                 if (app.index < 10) {
                     app.index += 1;
                     // check if the current question has already been answered
@@ -98,6 +100,9 @@ app.getQuiz = async function getQuizByCategory() {
         
             // when user clicks on previous button
             app.previousButtonElement = $('#previous').on('click', function() {
+                // take focus off previous button
+                app.previousButtonElement.blur();
+                // if not the first question, check if the question has been answered
                 if (app.index > 0) {
                     app.index -= 1;
                     app.checkIfQuestionWasAnswered(data);
